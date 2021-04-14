@@ -1,0 +1,16 @@
+<h1>CHECK LIST</h1><br>
+
+<p *ngFor="let data of datadariglob">
+
+  <input type="checkbox" (click)="update(data)">
+  {{data.name}}___Reminder : {{data.reminder}}
+
+</p>
+<div>
+  <input [(ngModel)]="nama" type="string" placeholder="nama">
+  <br>
+  <input [(ngModel)]="tanggal" type="date">
+</div>
+
+<button (click)="addData(nama,tanggal)">ADD</button>
+<button (click)="updateClick()">UPDATE</button>
